@@ -1,0 +1,21 @@
+<div class="main">
+    <div>
+        <input ng-model="search" class="search-bar" type="text" placeholder="search">
+    </div>
+    <div class="notes">
+
+        <div ng-repeat="note in notes | filter:search" class="note">
+
+            <button ng-click="removeNote(note.id)" class="delete-button">x</button>
+            <a class="wrapper-link" href="#!/detail/{{note.id}}">
+                <div class="note-title">{{note.title}}</div>
+            </a>
+            <div class="note-body"> {{note.body}} </div>
+
+        </div>
+
+    </div>
+
+    <a class="add-button" href="#!/newnote">Add New</a>
+
+</div>

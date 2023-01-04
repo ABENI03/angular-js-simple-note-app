@@ -1,36 +1,26 @@
 <!DOCTYPE html>
 <html lang="en" ng-app="notesApp">
+
 <head>
-     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Note</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
     <script src="./app.js"></script>
+    <link rel="stylesheet" href="style.css">
 </head>
-<body >
-    <div class="nav">
 
-    </div>
-    <div class="main" ng-controller="NotesController">
-        <div>
-            <input ng-model="search" class="search-bar" type="text" placeholder="search">
+<body>
+    <div class="viewWrapper">
+        <div class="nav">
         </div>
-        <div class="notes">
-           
-            <div  ng-repeat="note in notes | filter:search" class="note">
-                <div class="note-title">{{note.title}}</div>
-                <div class="note-body"> {{note.body}} </div>
+        <div ng-view></div>
+    </div>
 
-            </div>
-         
-        </div>
-        
-            <a class="add-button" href="#">Add</a>
-        
-    </div>
-    
 </body>
+
 </html>
