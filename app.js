@@ -37,7 +37,7 @@ notesApp.controller('NotesController', ['$scope' ,'$routeParams', function ($sco
     $scope.addNote=function (){
        
         var newNoteInput = {
-            id: parseInt($scope.notes[$scope.notes.length-1].id) + 1,
+            id: $scope.notes.length==!0 ?parseInt($scope.notes[$scope.notes.length-1].id) + 1:1,
             title: $scope.newNote.title,
             body: $scope.newNote.body
 
