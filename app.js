@@ -1,4 +1,5 @@
 var notesApp = angular.module('notesApp', ['ngRoute'])
+    
 
 notesApp.config(['$routeProvider',
     function config($routeProvider) {
